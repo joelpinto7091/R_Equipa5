@@ -28,7 +28,7 @@ public class Tarefa {
     
 
     
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "user_id", nullable = false)
     private Utilizador utilizador;
 

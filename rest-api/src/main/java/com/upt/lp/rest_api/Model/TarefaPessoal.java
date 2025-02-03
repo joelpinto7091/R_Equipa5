@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
+
 public class TarefaPessoal extends Tarefa{
 
     private String localizacao; // Local onde a tarefa será realizada

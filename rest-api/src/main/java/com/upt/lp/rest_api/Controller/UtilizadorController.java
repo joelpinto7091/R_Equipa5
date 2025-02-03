@@ -7,8 +7,13 @@ import org.springframework.web.bind.annotation.*;
 import com.upt.lp.rest_api.Model.Utilizador;
 import com.upt.lp.rest_api.Service.UtilizadorService;
 
+import jakarta.servlet.http.HttpSession;
+
+
 import java.util.List;
 import java.util.Optional;
+import java.util.Map;
+import java.util.HashMap;
 
 @RestController
 @RequestMapping("/api/utilizadores")
@@ -51,5 +56,7 @@ public class UtilizadorController {
         utilizadorService.eliminar(id);
         return ResponseEntity.noContent().build();
     }
+
 }
+
 
