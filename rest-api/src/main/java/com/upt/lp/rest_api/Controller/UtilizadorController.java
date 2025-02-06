@@ -56,6 +56,13 @@ public class UtilizadorController {
         utilizadorService.eliminar(id);
         return ResponseEntity.noContent().build();
     }
+    //get utilizador by username
+    @GetMapping("/email/{email}")
+    public ResponseEntity<Utilizador> procurarPorEmail(@PathVariable String email) {
+        return utilizadorService.procurarPorEmail(email)
+                .map(ResponseEntity::ok)
+                .orElse(ResponseEntity.notFound().build());
+    }
 
 }
 

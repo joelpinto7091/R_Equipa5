@@ -14,9 +14,6 @@ public class UtilizadorService {
     @Autowired
     private UtilizadorRepository utilizadorRepository;
 
-    public Optional<Utilizador> procurarPorEmail(String email) {
-        return utilizadorRepository.findByEmail(email);
-    }
 
     public Optional<Utilizador> validarCredenciais(String email, String password) {
         Optional<Utilizador> utilizador = utilizadorRepository.findByEmail(email);
@@ -42,5 +39,9 @@ public class UtilizadorService {
 
     public void eliminar(Long id) {
         utilizadorRepository.deleteById(id);
+    }
+
+    public Optional<Utilizador> procurarPorEmail(String email) {
+        return utilizadorRepository.findByEmail(email);
     }
 }

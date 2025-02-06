@@ -1,11 +1,8 @@
+package Model;
 
-package com.upt.lp.rest_api.Model;
-
-import jakarta.persistence.*;
 import java.time.LocalDateTime;
 
-@Entity
-public class TarefaPessoal extends Tarefa{
+public class TarefaPessoal extends Tarefa {
 
     private String localizacao; // Local onde a tarefa será realizada
     private int tempoEstimado; // Tempo estimado para conclusão (em minutos)
@@ -56,10 +53,5 @@ public class TarefaPessoal extends Tarefa{
     public void setFrequenciaRepeticao(String frequenciaRepeticao) {
         this.frequenciaRepeticao = frequenciaRepeticao;
     }
-    
 
-    
-
-    
 }
-

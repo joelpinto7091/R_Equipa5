@@ -1,28 +1,29 @@
-package com.upt.lp.rest_api.Model;
+package Model;
+
+
 
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
 
-@Entity
+
 public class Utilizador {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    
     private Long id;
 
-    @Column(nullable = false, unique = true, length = 50)
+   
     private String nome;
 
-    @Column(nullable = false, length = 255)
+   
     private String password;
 
-    @Column(nullable = false, unique = true, length = 100)
+   
     private String email;
 
-    @Column(nullable = false)
-    private boolean isAdmin;
+   
+    private boolean isAdmin = false;
 
-    @Column(nullable = false)
+  
     private LocalDateTime dataCriacao = LocalDateTime.now();
 
     //Construtor vazio
@@ -87,3 +88,4 @@ public class Utilizador {
    
 }
     
+
